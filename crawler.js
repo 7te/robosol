@@ -2,7 +2,7 @@
  * asks twitter for data on the accounts in usernames
  * creates a new file called tweets.json to store tweets locally for use later
  *
- *
+ * need to add a parser for tweets.json to make sure they fit the criteria to be posted
 */
 Twitter = require('twitter');
 const fs = require('fs');
@@ -17,7 +17,9 @@ const usernames = [
     "dril",
     "BaskingBall1",
     "garfielf_bot",
-    "superpiss"
+    "superpiss",
+    "ilovesmokingmid",
+    ""
 
 ];
 
