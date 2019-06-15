@@ -31,7 +31,7 @@ module.exports = {
         return lodash.random(1560360618, 1591920000);
     },
     
-    parseTweetFor: function (tweet) {
+    parseTweetForDiscord: function (tweet) {
         //const regex = `\W*((?i)${key}(?-i))\W*`;
         //words.match(regex);
         const cleanedTweet = tweet

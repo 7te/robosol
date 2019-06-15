@@ -126,7 +126,7 @@ client.on("message", (message) => {
     else if (message.content.startsWith("mio")) {
         if (utils.chanceOfPosting(3) === true){
             message.channel.send("Cortana, Call Miodayday on Steam");
-            message.channel.send(tweets[0].content);
+            message.channel.send(utils.parseTweetForDiscord(tweets[621].content));
         }
 
     }

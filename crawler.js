@@ -30,7 +30,7 @@ const usernames = [
 
 let params = {
     screen_name: "",
-    count: 100,
+    count: 300,
     result_type: 'recent',
     lang: 'en'
 };
