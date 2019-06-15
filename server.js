@@ -26,10 +26,11 @@ client.once('ready',() => {
 client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
-    //i'll probably change this to a case / switch statement at some point
+    //i'll DEFINITELY change this to a case / switch statement at some point
     //also i might replace the long ID strings with variables for peoples names for readability
-    if (message.author.bot) return;
-    //if a bot was the one that sent the message, we end the function here.
+    console.log(`${message.author.username}: ${message.content}`);
+    if (message.author.bot) {return;}
+    //if any bot was the one that sent the message, we end the function here.
 
     /* I think i'm going to set up a controller and only use variable names here
      * i can default it to not sending data
@@ -124,7 +125,7 @@ client.on("message", (message) => {
     }
     else if (message.content.startsWith("mio")) {
         if (utils.chanceOfPosting(3) === true){
-            message.channel.send("Cortana, Call Miodayday on Steam").catch(console.error);
+            message.channel.send("Cortana, Call Miodayday on Steam");
             message.channel.send(tweets[0].content);
         }
 
@@ -135,9 +136,10 @@ client.on("message", (message) => {
     else if (message.content === 'sol') {
         message.channel.send('what');
     }
-    else if (message.mentions === '<@!204060249827704832>') {
+    else if (message.mentions('<@!204060249827704832>')) {
         message.channel.send('what');
     }
+
     else if (utils.chanceOfPosting(10000)){
         message.channel.send("nigger");
         message.react('<:wideBruh:539948737020297223>');
@@ -157,7 +159,6 @@ client.on("message", (message) => {
         }
     } else {return null;}
 
-    //console.log(`${message.author.username}: ${message.content}`);
 });
 
 client.login(config.token);
