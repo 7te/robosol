@@ -17,7 +17,7 @@ const utils = require("./utils.js");
 // utils is helper utilities for discordjs or variables to make this more legible
 
 client.once('ready',() => {
-    client.user.setActivity('Hentai Island');
+    client.user.setActivity('Minecraft: Sexy Edition 2');
     // ^ this part is crucial
     console.log(`robosol has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
 });
@@ -27,7 +27,6 @@ client.on("message", (message) => {
     //we check to see if it meets certain criteria
     //i'll probably change this to a case / switch statement at some point
     //also i might replace the long ID strings with variables for peoples names for readability
-    const sendMessage = message.channel.send();
     if (message.author.bot) return;
     //if a bot was the one that sent the message, we end the function here.
 
@@ -59,7 +58,7 @@ client.on("message", (message) => {
         if (utils.chanceOfPosting(20) === true) {
             message.channel.send({
                 files: [{
-                    attachment: '/Users/j/Dev/sandbox/robosol/media/brad.png',
+                    attachment: './media/brad.png',
                     name: 'brad.png'
                 }]
             }).catch(console.error);
@@ -103,6 +102,14 @@ client.on("message", (message) => {
             message.react("💁🏻");
         }
     }
+    else if (message.author.id === "149238310286393344"){
+        message.channel.send({
+            files: [{
+                attachment: './media/cap.png',
+                name: 'cap.png'
+            }]
+        }).catch(console.error);
+    }
     else if (message.content === 'wizard game') {
         message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John');
     }
@@ -126,7 +133,7 @@ client.on("message", (message) => {
 
     }
     else if (message.content.startsWith("bladee")){
-        message.channel.send('♵☆');
+        utils.postMessage('♵☆');
     }
     else if (message.content === 'sol') {
         message.channel.send('what');

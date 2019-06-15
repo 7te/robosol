@@ -9,12 +9,11 @@ module.exports = {
     chanceOfPosting: function (chance) {
         if (lodash.random(1,chance) === chance) {
             return true;
-        } else  {
-            return false;
         }
     },
 
     processMessage: function (message, phrase, response) {
+        //i think i need to split this up into more functions
         if (message.content === phrase) {
             message.channel.send(response).catch(console.warn);
         }
@@ -32,11 +31,19 @@ module.exports = {
         return lodash.random(1560360618, 1591920000);
     },
     
-    parseStringFor: function (phrase, key) {
+    parseTweetFor: function (tweet) {
         //const regex = `\W*((?i)${key}(?-i))\W*`;
         //words.match(regex);
-        const match = phrase.includes(key);
-        return match;
-    }
+        const cleanedTweet = tweet
+            .replace(/@/g,'')
+            .replace(/https*/, '')
+            .replace(/\\/g, '');
+        return cleanedTweet;
+    },
+
+    postMessage: message.channel.send(),
+    discordUser: message.author.id,
+    addReacts: message.react(),
+
 
 };

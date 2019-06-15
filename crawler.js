@@ -3,9 +3,12 @@
  * creates a new file called tweets.json to store tweets locally for use later
  *
  * need to add a parser for tweets.json to make sure they fit the criteria to be posted
+ *
+ * need to add something to  remove the comma on last line for tweets.json to be valid JSONdata
 */
 Twitter = require('twitter');
 const fs = require('fs');
+
 const config = {
     consumer_key : "XAMEtQXptUovE9bdIRIAeGgOC",
     consumer_secret : "dZQvmmrLlipFjMh1tOUZh889Cyn0XloN2KYV8vnBmHF1m4crRN",
@@ -19,13 +22,15 @@ const usernames = [
     "garfielf_bot",
     "superpiss",
     "ilovesmokingmid",
-    ""
-
+    "degg",
+    "FakeCat_Fancy",
+    "famouscrab",
+    "imagoonassniqqa"
 ];
 
 let params = {
     screen_name: "",
-    count: 25,
+    count: 100,
     result_type: 'recent',
     lang: 'en'
 };
@@ -64,6 +69,18 @@ const generateTweetFile = function () {
     }
 };
 
+const closeTweetFile = function () {
+    //this is? running
+    console.log('ran closetweet');
+    if (trueIndex == fakeIndex) {
+        console.log('reached TrueIndex');
+        fs.appendFileSync('tweets.json', `]`, function (err) {
+
+            console.log(err);
+        });
+    }
+};
+
 //generateTweetFile().then(storeTweetsFunction());
 const getAPIandProcess = function() {
     T.get('statuses/user_timeline', params, function (err, data, res) {
@@ -94,17 +111,6 @@ usernames.forEach(function(username, index) {
     getAPIandProcess(params.screen_name = username);
 });
 
-function closer () {
-    //this isnt running
-    console.log('ran');
-    if (trueIndex == fakeIndex) {
-        console.log('reached TrueIndex');
-        fs.appendFileSync('tweets.json', `]`, function (err) {
-
-            console.log(err);
-        });
-    }
-}
-
+closeTweetFile();
 
 console.timeEnd('full');

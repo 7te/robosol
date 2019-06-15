@@ -4,7 +4,7 @@
 const TwitterCrawler = require('twitter-crawler');
 const fs = require('fs');
 const log = require('winston');
-const Promise = require('bluebird');
+//const Promise = require('bluebird');
 
 const getEnvCredentials = () =>
     process.env.TWITTER_CREDENTIALS ? JSON.parse(process.env.TWITTER_CREDENTIALS) : [];
