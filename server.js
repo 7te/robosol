@@ -11,6 +11,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.js");
 const utils = require("./utils.js");
+const tweets = require("./tweets.json");
 
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
@@ -103,12 +104,7 @@ client.on("message", (message) => {
         }
     }
     else if (message.author.id === "149238310286393344"){
-        message.channel.send({
-            files: [{
-                attachment: './media/cap.png',
-                name: 'cap.png'
-            }]
-        }).catch(console.error);
+        message.channel.send("https://i.imgur.com/MNWxGAE.png").catch(console.error);
     }
     else if (message.content === 'wizard game') {
         message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John');
@@ -129,6 +125,7 @@ client.on("message", (message) => {
     else if (message.content.startsWith("mio")) {
         if (utils.chanceOfPosting(3) === true){
             message.channel.send("Cortana, Call Miodayday on Steam").catch(console.error);
+            message.channel.send(tweets[0].content);
         }
 
     }

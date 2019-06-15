@@ -36,14 +36,14 @@ module.exports = {
         //words.match(regex);
         const cleanedTweet = tweet
             .replace(/@/g,'')
-            .replace(/https*/, '')
-            .replace(/\\/g, '');
+            .replace(/https\/\//, '')
+            .replace(/RT/g, '');
         return cleanedTweet;
     },
 
-    postMessage: message.channel.send(),
-    discordUser: message.author.id,
-    addReacts: message.react(),
+   // postMessage: message.channel.send(),
+   // discordUser: message.author.id,
+   // addReacts: message.react(),
 
 
 };
