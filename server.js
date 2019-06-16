@@ -105,7 +105,9 @@ client.on("message", (message) => {
         }
     }
     else if (message.author.id === "149238310286393344"){
-        message.channel.send("https://i.imgur.com/MNWxGAE.png").catch(console.error);
+        if (utils.chanceOfPosting(10 === true)) {
+            message.channel.send("https://i.imgur.com/MNWxGAE.png").catch(console.error);
+        }
     }
     else if (message.content === 'wizard game') {
         message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John');

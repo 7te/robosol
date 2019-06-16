@@ -25,7 +25,8 @@ const usernames = [
     "degg",
     "FakeCat_Fancy",
     "famouscrab",
-    "imagoonassniqqa"
+    "imagoonassniqqa",
+    "Veggiefact"
 ];
 
 let params = {

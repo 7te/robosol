@@ -27,7 +27,7 @@ module.exports = {
         return lodash.random([channelIDs]);
     },
 
-    getRandomDate: function() {
+    getRandomTime: function() {
         return lodash.random(1560360618, 1591920000);
     },
     
