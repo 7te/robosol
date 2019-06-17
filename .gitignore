@@ -58,6 +58,7 @@ jspm_packages
 .idea/robosol.iml
 .idea/watcherTasks.xml
 .idea/workspace.xml
+.idea/vcs.xml
 
 node_modules/
 config.js

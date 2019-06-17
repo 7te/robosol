@@ -6,26 +6,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 module.exports = {
-    filterMessage: function (message, phrase, response, user, reaction) {
-       // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
-        //i think i need to split this up into more functions bc it feels like a mess
-        //tldr this function is a pile of hot garbage
-
-        const messageObject = {
-            message,
-            phrase,
-            response,
-            user,
-            reaction
-        };
-        if (message.content === utils.contains(message, phrase)) {
-            message.channel.send(response).catch(console.warn);
-        }
-        if (message.isMemberMentioned(user)) {
-            console.log(`member ${user} was mentioned!`);
-            return true;
-        }
-    },
     respondToMessage: function(message) {
 
         if (message.content.startsWith("kz")
@@ -129,10 +109,10 @@ module.exports = {
         }
 
         else if (utils.chanceOfPosting(10000)) {
-            message.channel.send("nigger");
+            message.channel.send(process.env.gamerWord);
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
         }
-        else if (message.content === 'nigger') {
+        else if (message.content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);
         }
 
