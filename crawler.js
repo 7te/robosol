@@ -8,13 +8,7 @@
 */
 Twitter = require('twitter');
 const fs = require('fs');
-
-const config = {
-    consumer_key : "XAMEtQXptUovE9bdIRIAeGgOC",
-    consumer_secret : "dZQvmmrLlipFjMh1tOUZh889Cyn0XloN2KYV8vnBmHF1m4crRN",
-    access_token_key : "14260781-jWeLckJk7YKxx2maS5SvjW6jQywWKNOhn6Pb6M2zR",
-    access_token_secret : "hsJYfTX4IkYIKwuIRvLxX3kZTOzIUM7m7ThYOklqMP76y"
-};
+const config = require('./config.js');
 
 const usernames = [
     "dril",

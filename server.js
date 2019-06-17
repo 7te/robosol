@@ -35,6 +35,6 @@ client.on("message", (message) => {
     responses.respondToMessage(message);
 });
 
-utils.postRandomTweet();
+//utils.postRandomTweet();
 
-client.login(config.token);
+client.login(process.env.token);

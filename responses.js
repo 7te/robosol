@@ -9,8 +9,16 @@ module.exports = {
     filterMessage: function (message, phrase, response, user, reaction) {
        // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
         //i think i need to split this up into more functions bc it feels like a mess
-        //this function is a shitshow
-        if (message.content === utils.messageContains(message, phrase)) {
+        //tldr this function is a pile of hot garbage
+
+        const messageObject = {
+            message,
+            phrase,
+            response,
+            user,
+            reaction
+        };
+        if (message.content === utils.contains(message, phrase)) {
             message.channel.send(response).catch(console.warn);
         }
         if (message.isMemberMentioned(user)) {

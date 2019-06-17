@@ -35,7 +35,7 @@ module.exports = {
         return cleanedTweet;
     },
 
-    messageContains: function (message, word) {
+    contains: function (message, word) {
         let messageArray = message.content.split(" ");
         for (let i = 0; i < messageArray.length; i++ ){
             if (message[i] === word){
@@ -47,7 +47,7 @@ module.exports = {
 
     },
     postRandomTweet: function (today) {
-        //this is going to have bugs and i need to fix them
+        //this is going to have a lot of bugs and i need to fix them
         const tweetsTotal = tweets.length.toNumber;
         let dayCount = 0;
         let dayArray = [];
