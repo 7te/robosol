@@ -18,13 +18,6 @@ module.exports = {
         return lodash.random([channelIDs]);
     },
 
-    getRandomDay: function() {
-        let day = new Date();
-        day = day.getDate();
-        return day;
-        //return lodash.random(1560360618, 1591920000);
-    },
-    
     parseTweetForDiscord: function (tweet) {
         //const regex = `\W*((?i)${key}(?-i))\W*`;
         //words.match(regex);
@@ -49,20 +42,35 @@ module.exports = {
         }
 
     },
-    postRandomTweet: function (today) {
+    postRandomTweet: function () {
         //this is going to have a lot of bugs and i need to fix them
+        //originally i was going to have a couple functions for this but
+        //whatever
         const tweetsTotal = tweets.length.toNumber;
+        console.log(tweetsTotal);
+        let day = new Date();
+        day = day.getDate();
+        console.log(day);
         let dayCount = 0;
         let dayArray = [];
-        for (let i = 0; i < dayArray.length; i++ ){
-            dayArray += today;
-            console.log(today);
-            dayCount ++;
+
+        if(dayCount < 366) {
+            for (let i = 0; i < dayArray.length; i++ ){
+
+                dayArray += day;
+                dayCount ++;
+
+            }
+
+        } else if (dayCount === 365) {
+            dayCount = 0;
+            //i'm going to blissfully ignore that 2020 is a leap year
         }
 
     },
     filterMessage: function (message, phrase, response, user, reaction) {
         // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
+
         //i think i need to split this up into more functions bc it feels like a mess
         //tldr this function is a pile of hot garbage
 
