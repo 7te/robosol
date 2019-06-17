@@ -3,6 +3,7 @@
  */
 //import lodash from 'lodash';
 const lodash = require("lodash");
+const tweets = require("./tweets.json");
 
 module.exports = {
 
@@ -25,7 +26,7 @@ module.exports = {
     },
 
     chooseRandomChannel: function(){
-        const channelIDs = guild.channels.get().map(c => c.id).join();
+        const channelIDs = client.channels.get().map(c => c.id).join();
         return lodash.random([channelIDs]);
     },
 
@@ -49,6 +50,8 @@ module.exports = {
             if (message[i] === word){
                 console.log("widePeepoHappy");
             }
+            //return (message[i] ? word : "");
+            //oh god i forgot how ternary operators work
         }
 
     }
