@@ -102,6 +102,7 @@ module.exports = {
             message.channel.send('♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆').catch(console.warn);
         }
         else if (message.content === utils.contains(message.content, 'sol')) {
+            console.log("sol res trigger");
             message.channel.send('what').catch(console.warn);
         }
         else if (message.isMemberMentioned('<@!204060249827704832>')) {

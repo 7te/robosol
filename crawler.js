@@ -32,7 +32,7 @@ const usernames = [
 
 let params = {
     screen_name: "",
-    count: 300,
+    count: 500,
     result_type: 'recent',
     lang: 'en'
 };
@@ -72,7 +72,7 @@ const generateTweetFile = function () {
 };
 
 const closeTweetFile = function () {
-    //this is? running
+    //this doesnt work rofl u have to do it manually
     console.log('ran closetweet');
     if (trueIndex === fakeIndex) {
         console.log('reached TrueIndex');

@@ -41,6 +41,7 @@ module.exports = {
             for (let i = 0; i < messageArray.length; i++ ){
                 if (message[i] === word){
                     console.log("widePeepoHappy");
+                    return true;
                 }
                 //return (message[i] ? word : "");
                 //oh god i forgot how ternary operators work
