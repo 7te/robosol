@@ -7,7 +7,7 @@ const client = new Discord.Client();
 
 module.exports = {
     filterMessage: function (message, phrase, response, user, reaction) {
-        const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
+       // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
         //i think i need to split this up into more functions bc it feels like a mess
         //this function is a shitshow
         if (message.content === utils.messageContains(message, phrase)) {
