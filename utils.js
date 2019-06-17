@@ -5,7 +5,7 @@ const lodash = require("lodash");
 const tweets = require("./tweets.json");
 const responses = require("./responses");
 
-module.exports = {
+const self = module.exports = {
 
     chanceOfPosting: function (chance) {
         if (lodash.random(1,chance) === chance) {
@@ -77,7 +77,7 @@ module.exports = {
         if (message.messageEmbed) {return;}
         if (message.messageAttachment) {return;}
 
-        if (message.content === exports.contains(message, phrase)) {
+        if (message.content === self.contains(message, phrase)) {
             message.channel.send(response).catch(console.warn);
         }
         if (message.isMemberMentioned(user)) {
