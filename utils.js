@@ -4,6 +4,8 @@
 const lodash = require("lodash");
 const tweets = require("./tweets.json");
 const responses = require("./responses");
+const Discord = require("discord.js");
+const client = new Discord.Client();
 
 const self = module.exports = {
 
@@ -29,6 +31,7 @@ const self = module.exports = {
     },
 
     contains: function (message, word) {
+        console.log(message, word);
         if (message.content) {
             let messageArray = message.content.split(" ");
             for (let i = 0; i < messageArray.length; i++ ){
@@ -80,7 +83,7 @@ const self = module.exports = {
         if (message.content === self.contains(message, phrase)) {
             message.channel.send(response).catch(console.warn);
         }
-        if (message.isMemberMentioned(user)) {
+        if (message.isMemberMentioned(user) !== undefined) {
             console.log(`member ${user} was mentioned!`);
         }
         responses.respondToMessage(message);
