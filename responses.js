@@ -118,10 +118,10 @@ module.exports = {
         else if (message.content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);
         }
-        if (message.isMemberMentioned(client.user)) {
-            console.log("got mentionedwowowowwowo");
-            message.channel.send(tweets[lodash.random(0,tweets.length)].content);
-        }
+        //if (message.isMemberMentioned(client.user)) {
+        //    console.log("got mentionedwowowowwowo");
+        //    message.channel.send(tweets[lodash.random(0,tweets.length)].content);
+       // }
 
         //annoying thing that doesnt work yet
         else if (message.content.startsWith("oh really")) {
