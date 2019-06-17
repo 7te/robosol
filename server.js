@@ -28,19 +28,13 @@ client.once('ready',() => {
 client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
-    //i'll DEFINITELY change this to a case / switch statement at some point
-    //also i might replace the long ID strings with variables for peoples names for readability
     console.log(`${message.author.username}: ${message.content}`);
     if (message.author.bot) {return;}
-    //if any bot was the one that sent the message, we end the function here.
-
-    /* I think i'm going to set up a controller and only use variable names here
-     * i can default it to not sending data
-     * in config.js or something similar to that
-     *
-     *phrase specific responses below
-     */
+    if (message.messageEmbed) {return;}
+    if (message.messageAttachment) {return;}
     responses.respondToMessage(message);
 });
+
+utils.postRandomTweet();
 
 client.login(config.token);

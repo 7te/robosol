@@ -13,25 +13,16 @@ module.exports = {
         }
     },
 
-    processMessage: function (message, phrase, response, user, reaction) {
-        const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
-        //i think i need to split this up into more functions bc it feels like a mess
-        //this function is a shitshow
-        if (message.content === phrase) {
-            message.channel.send(response).catch(console.warn);
-        }
-        if (message.isMemberMentioned(user)) {
-            return true;
-        }
-    },
-
-    chooseRandomChannel: function(){
+    getRandomChannel: function(){
         const channelIDs = client.channels.get().map(c => c.id).join();
         return lodash.random([channelIDs]);
     },
 
-    getRandomTime: function() {
-        return lodash.random(1560360618, 1591920000);
+    getRandomDay: function() {
+        let day = new Date();
+        day = day.getDate();
+        return day;
+        //return lodash.random(1560360618, 1591920000);
     },
     
     parseTweetForDiscord: function (tweet) {
@@ -54,9 +45,21 @@ module.exports = {
             //oh god i forgot how ternary operators work
         }
 
+    },
+    postRandomTweet: function (today) {
+        //this is going to have bugs and i need to fix them
+        const tweetsTotal = tweets.length.toNumber;
+        let dayCount = 0;
+        let dayArray = [];
+        for (let i = 0; i < dayArray.length; i++ ){
+            dayArray += today;
+            console.log(today);
+            dayCount ++;
+        }
+
     }
 
-    //dis shit dont work cuzzo
+    //dis shit below dont work cuzzo
 
    // postMessage: message.channel.send(),
    // discordUser: message.author.id,
