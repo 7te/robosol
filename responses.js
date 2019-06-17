@@ -3,6 +3,8 @@
 */
 const utils = require("./utils.js");
 const Discord = require("discord.js");
+const lodash = require("lodash");
+const tweets = require("./tweets.json");
 const client = new Discord.Client();
 
 module.exports = {
@@ -94,7 +96,7 @@ module.exports = {
         else if (message.content.startsWith("mio")) {
             if (utils.chanceOfPosting(3) === true) {
                 message.channel.send("Cortana, Call Miodayday on Steam").catch(console.warn);
-                //message.channel.send(utils.parseTweetForDiscord(tweets[621].content));
+                message.channel.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
             }
 
         }
@@ -115,6 +117,10 @@ module.exports = {
         }
         else if (message.content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);
+        }
+        if (message.isMemberMentioned(client.user)) {
+            console.log("got mentionedwowowowwowo");
+            message.channel.send(tweets[lodash.random(0,tweets.length)].content);
         }
 
         //annoying thing that doesnt work yet

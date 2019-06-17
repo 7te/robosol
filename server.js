@@ -12,7 +12,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.js");
-const responses = require("./responses.js");
+const utils = require("./utils.js");
 
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
@@ -28,10 +28,8 @@ client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
     console.log(`${message.author.username}: ${message.content}`);
-    if (message.author.bot) {return;}
-    if (message.messageEmbed) {return;}
-    if (message.messageAttachment) {return;}
-    responses.respondToMessage(message);
+
+    utils.filterMessage(message);
 });
 
 //utils.postRandomTweet();

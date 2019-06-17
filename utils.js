@@ -1,9 +1,9 @@
 /**
  * Created by j on 6/12/19.
  */
-//import lodash from 'lodash';
 const lodash = require("lodash");
 const tweets = require("./tweets.json");
+const responses = require("./responses");
 
 module.exports = {
 
@@ -73,24 +73,18 @@ module.exports = {
 
         //i think i need to split this up into more functions bc it feels like a mess
         //tldr this function is a pile of steaming hot garbage
+        if (message.author.bot) {return;}
+        if (message.messageEmbed) {return;}
+        if (message.messageAttachment) {return;}
 
-        const messageObject = {
-            message,
-            phrase,
-            response,
-            user,
-            reaction
-        };
         if (message.content === utils.contains(message, phrase)) {
             message.channel.send(response).catch(console.warn);
         }
         if (message.isMemberMentioned(user)) {
             console.log(`member ${user} was mentioned!`);
-            return true;
         }
-        if (message.isMemberMentioned("569687145711796244")) {
-            message.channel.send(tweets[lodash.random(0,tweets.length)].content);
-        }
+        responses.respondToMessage(message);
+
     },
 
     //dis shit below dont work cuzzo
@@ -98,6 +92,5 @@ module.exports = {
    // postMessage: message.channel.send(),
    // discordUser: message.author.id,
    // addReacts: message.react(),
-
 
 };
