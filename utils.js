@@ -72,7 +72,7 @@ module.exports = {
         // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
 
         //i think i need to split this up into more functions bc it feels like a mess
-        //tldr this function is a pile of hot garbage
+        //tldr this function is a pile of steaming hot garbage
 
         const messageObject = {
             message,
@@ -87,6 +87,9 @@ module.exports = {
         if (message.isMemberMentioned(user)) {
             console.log(`member ${user} was mentioned!`);
             return true;
+        }
+        if (message.isMemberMentioned("569687145711796244")) {
+            message.channel.send(tweets[lodash.random(0,tweets.length)].content);
         }
     },
 
