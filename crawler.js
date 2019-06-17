@@ -8,14 +8,14 @@
 */
 Twitter = require('twitter');
 const fs = require('fs');
+
+
 const config  = {
     consumer_key: process.env.consumer_key,
      consumer_secret :process.env.consumer_secret,
     access_token_key : process.env.access_token_key,
     access_token_secret : process.env.access_token_secret
-
 };
-
 
 const usernames = [
     "dril",
@@ -48,7 +48,7 @@ const storeTweetsFunction = function (tweet) {
    });
 };
 
-const createTweetObj = function (index, number, message,) {
+const createTweetObj = function (index, number, message) {
 
     const tweet = {
         index:index,
@@ -74,7 +74,7 @@ const generateTweetFile = function () {
 const closeTweetFile = function () {
     //this is? running
     console.log('ran closetweet');
-    if (trueIndex == fakeIndex) {
+    if (trueIndex === fakeIndex) {
         console.log('reached TrueIndex');
         fs.appendFileSync('tweets.json', `]`, function (err) {
 
@@ -95,7 +95,7 @@ const getAPIandProcess = function() {
                 let JSONformatted = JSON.stringify(createTweetObj(fakeIndex, IDSTRING, CONTENT), null, 2);
                 storeTweetsFunction(JSONformatted);
                 fakeIndex++;
-                if (i == special) {
+                if (i === special) {
                     console.log("triggered");
                     //fs.readFileSync(a,b);
                 }
