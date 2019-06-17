@@ -71,6 +71,7 @@ const self = module.exports = {
         }
 
     },
+
     filterMessage: function (message, phrase, response, user, reaction) {
         // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
 
@@ -89,5 +90,14 @@ const self = module.exports = {
         responses.respondToMessage(message);
 
     },
+    getUserFromMention : function (mention) {
+        const matches = mention.match(/^<@!?(\d+)>$/);
+         // The id is the first and only match found by the RegEx.
+         // However the first element in the matches array will be the entire mention, not just the ID,
+         // so use index 1.
+        const id = matches[1];
+
+        return client.users.get(id);
+    }
 
 };

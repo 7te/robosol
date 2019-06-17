@@ -107,9 +107,9 @@ module.exports = {
             console.log("sol responses.js trigger");
             message.channel.send('what').catch(console.warn);
         }
-        else if (message.isMemberMentioned('<@!204060249827704832>')) {
-            message.channel.send('what').catch(console.warn);
-        }
+        //else if (message.isMemberMentioned('<@!204060249827704832>').catch(console.warn)) {
+        //    message.channel.send('what').catch(console.warn);
+       // }
 
         else if (utils.chanceOfPosting(10000)) {
             message.channel.send(process.env.gamerWord);

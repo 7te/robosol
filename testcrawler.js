@@ -1,6 +1,7 @@
 /**
  * Created by j on 6/13/19.
  */
+//i wanted this to work but it didnt :D so i made my own
 const TwitterCrawler = require('twitter-crawler');
 const fs = require('fs');
 const log = require('winston');
