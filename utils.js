@@ -87,10 +87,4 @@ const self = module.exports = {
 
     },
 
-    //dis shit below dont work cuzzo
-
-   // postMessage: message.channel.send(),
-   // discordUser: message.author.id,
-   // addReacts: message.react(),
-
 };

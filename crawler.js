@@ -8,6 +8,7 @@
 */
 Twitter = require('twitter');
 const fs = require('fs');
+require('dotenv').config();
 
 
 const config  = {
@@ -102,6 +103,8 @@ const getAPIandProcess = function() {
             }
             //console.warn(`API cycled through ${data.length} tweets`);
             //console.timeEnd("in");
+        } else if (err){
+            console.warn(err);
         }
     });
 };
@@ -113,6 +116,6 @@ usernames.forEach(function(username, index) {
     getAPIandProcess(params.screen_name = username);
 });
 
-closeTweetFile();
+//closeTweetFile();
 
 console.timeEnd('full');
