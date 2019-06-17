@@ -77,7 +77,7 @@ module.exports = {
         if (message.messageEmbed) {return;}
         if (message.messageAttachment) {return;}
 
-        if (message.content === utils.contains(message, phrase)) {
+        if (message.content === exports.contains(message, phrase)) {
             message.channel.send(response).catch(console.warn);
         }
         if (message.isMemberMentioned(user)) {
