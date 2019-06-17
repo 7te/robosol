@@ -138,9 +138,9 @@ client.on("message", (message) => {
     else if (message.content === 'sol') {
         message.channel.send('what');
     }
-    else if (message.mentions('<@!204060249827704832>')) {
-        message.channel.send('what');
-    }
+    //else if (message.mentions('<@!204060249827704832>')) {
+    //    message.channel.send('what');
+    //}
 
     else if (utils.chanceOfPosting(10000)){
         message.channel.send("nigger");
