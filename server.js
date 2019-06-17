@@ -40,7 +40,6 @@ client.on("message", (message) => {
      */
     else if (message.content.startsWith("kz")) {
         if (utils.chanceOfPosting(2) === true) {
-            console.log("chance true");
             message.channel.send("^^^ u lame fa dis 1");
             message.react('🤔');
         }
@@ -57,13 +56,8 @@ client.on("message", (message) => {
     }
     /* user specific responses below */
     else if (message.author.id === '107504074068361216') {
-        if (utils.chanceOfPosting(20) === true) {
-            message.channel.send({
-                files: [{
-                    attachment: './media/brad.png',
-                    name: 'brad.png'
-                }]
-            }).catch(console.error);
+        if (utils.chanceOfPosting(14) === true) {
+            message.channel.send("https://i.imgur.com/UyKwfHD.png");
             message.channel.send("https://clips.twitch.tv/MiniatureAttractiveBaconChefFrank");
 
         }
@@ -138,9 +132,9 @@ client.on("message", (message) => {
     else if (message.content === 'sol') {
         message.channel.send('what');
     }
-    //else if (message.mentions('<@!204060249827704832>')) {
-    //    message.channel.send('what');
-    //}
+    else if (message.isMemberMentioned('<@!204060249827704832>')) {
+        message.channel.send('what');
+    }
 
     else if (utils.chanceOfPosting(10000)){
         message.channel.send("nigger");
@@ -159,7 +153,7 @@ client.on("message", (message) => {
             client.channels.get("459848241819811841").send("!play oh really young thug")
                 .then(connection => setInterval(client.voiceChannel.leave(),5000));
         }
-    } else {return null;}
+    } else {return;}
 
 });
 

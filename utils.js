@@ -12,12 +12,14 @@ module.exports = {
         }
     },
 
-    processMessage: function (message, phrase, response) {
-        //i think i need to split this up into more functions
+    processMessage: function (message, phrase, response, user, reaction) {
+        const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
+        //i think i need to split this up into more functions bc it feels like a mess
+        //this function is a shitshow
         if (message.content === phrase) {
             message.channel.send(response).catch(console.warn);
         }
-        if (message.mentions) {
+        if (message.isMemberMentioned(user)) {
             return true;
         }
     },
@@ -40,6 +42,18 @@ module.exports = {
             .replace(/RT/g, '');
         return cleanedTweet;
     },
+
+    messageContains: function (message, word) {
+        let messageArray = message.content.split(" ");
+        for (let i = 0; i < messageArray.length; i++ ){
+            if (message[i] === word){
+                console.log("widePeepoHappy");
+            }
+        }
+
+    }
+
+    //dis shit dont work cuzzo
 
    // postMessage: message.channel.send(),
    // discordUser: message.author.id,
