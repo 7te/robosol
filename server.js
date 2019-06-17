@@ -133,7 +133,7 @@ client.on("message", (message) => {
 
     }
     else if (message.content.startsWith("bladee")){
-        utils.postMessage('♵☆');
+        message.channel.send('♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆');
     }
     else if (message.content === 'sol') {
         message.channel.send('what');
