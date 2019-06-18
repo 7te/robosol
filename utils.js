@@ -82,7 +82,8 @@ const self = module.exports = {
         if (message.messageAttachment) {return;}
 
         if (message.content === self.contains(message, phrase)) {
-            message.channel.send(response).catch(console.warn);
+            message.channel.send(response);
+                //.catch(console.warn);
         }
        // if (message.isMemberMentioned(user) !== undefined) {
        //     console.log(`member ${user} was mentioned!`);
