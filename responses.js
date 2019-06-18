@@ -103,10 +103,11 @@ module.exports = {
         else if (message.content.startsWith("bladee")) {
             message.channel.send('♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆').catch(console.warn);
         }
-        else if (utils.contains(message.content, 'sol')) {
-            console.log("sol responses.js trigger");
-            message.channel.send('what').catch(console.warn);
-        }
+        //else if (utils.contains(message.content, 'sol')) {
+        //    console.log("sol responses.js trigger");
+        //    message.channel.send('what').catch(console.warn);
+        //}
+
         //else if (message.isMemberMentioned('<@!204060249827704832>').catch(console.warn)) {
         //    message.channel.send('what').catch(console.warn);
         // }
