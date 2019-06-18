@@ -36,7 +36,7 @@ module.exports = {
             }
         }
         else if (message.author.id === '166494684896559104') {
-            if (utils.chanceOfPosting(50) === true) {
+            if (utils.self.chanceOfPosting(50) === true) {
                 // utils.chanceOfPosting makes it semi random if robosol responds, the higher the number
                 // the more unlikely it is to happen
                 message.channel.send("https://clips.twitch.tv/CorrectProudGerbilNotATK").catch(console.warn);
