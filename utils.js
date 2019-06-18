@@ -6,8 +6,7 @@ const tweets = require("./tweets.json");
 const responses = require("./responses");
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
-const self = module.exports = {
+ module.exports = {
 
     chanceOfPosting: function (chance) {
         if (lodash.random(1,chance) === chance) {
@@ -81,10 +80,10 @@ const self = module.exports = {
         if (message.messageEmbed) {return;}
         if (message.messageAttachment) {return;}
 
-        if (message.content === self.contains(message, phrase)) {
-            message.channel.send(response);
+        //if (message.content === self.contains(message, phrase)) {
+         //   message.channel.send(response);
                 //.catch(console.warn);
-        }
+        //}
        // if (message.isMemberMentioned(user) !== undefined) {
        //     console.log(`member ${user} was mentioned!`);
         //}
