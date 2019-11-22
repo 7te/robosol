@@ -8,13 +8,14 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "dotenv": "^8.0.0",
+    "esm": "^3.2.25",
     "fs": "0.0.1-security",
     "lodash": "^4.17.15",
     "twitter": "^1.7.1"
   },
   "scripts": {
     "crawl": "node crawler.js",
-    "start": "node server.js"
+    "start": "node -r esm server.js"
   },
   "engines": {
     "node": "10.x",
