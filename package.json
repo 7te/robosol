@@ -1,0 +1,24 @@
+{
+  "name": "robosol",
+  "version": "0.1.0",
+  "author": "Jordan Ledford",
+  "description": "shitshow",
+  "license": "UNLICENSE",
+  "repository": "lolnope",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.0.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.15",
+    "twitter": "^1.7.1"
+  },
+  "scripts": {
+    "crawl": "node crawler.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": "*"
+  },
+  "main": "server.js"
+}
