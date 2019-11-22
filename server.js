@@ -9,7 +9,7 @@
 //soon markov chain >:)
 //🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋
 
-import * as responses from "./responses.js";
+import * as controller from "./controller.js";
 const Discord = require("discord.js");
 const client = new Discord.Client();
 //const config = require("./config.js");
@@ -29,7 +29,7 @@ client.on("message", (message) => {
     //we check to see if it meets certain criteria
     console.log(`${message.author.username}: ${message.content}`);
 
-    responses.filterMessage(message);
+    controller.filterMessage(message);
 });
 
 //utils.postRandomTweet();
