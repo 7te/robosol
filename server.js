@@ -8,6 +8,7 @@
 //
 //soon markov chain >:)
 //🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋
+
 import * as responses from "./responses.js";
 const Discord = require("discord.js");
 const client = new Discord.Client();

@@ -21,5 +21,8 @@
     "node": "10.x",
     "npm": "*"
   },
-  "main": "server.js"
+  "main": "server.js",
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
 }
