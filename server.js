@@ -11,7 +11,7 @@
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require("./config.js");
+//const config = require("./config.js");
 const utils = require("./utils.js");
 
 // config.token contains the bot's token
