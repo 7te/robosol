@@ -77,6 +77,11 @@ module.exports = {
                 message.channel.send("https://i.imgur.com/MNWxGAE.png").catch(console.warn);
             }
         }
+        else if (message.author.id === "267508270208385026") {
+            if (utils.chanceOfPosting(100 === true)){
+                message.channel.send("sick invite").catch(console.warn());
+            }
+        }
         else if (message.content === 'wizard game') {
             message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John').catch(console.warn);
         }
@@ -101,7 +106,7 @@ module.exports = {
 
         }
         else if (message.content.startsWith("bladee")) {
-            message.channel.send('♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆♵☆').catch(console.warn);
+            message.channel.send('♻️✨♻️✨♻️✨♻️✨♻️✨♻️✨').catch(console.warn);
         }
         //else if (utils.contains(message.content, 'sol')) {
         //    console.log("sol responses.js trigger");

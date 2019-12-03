@@ -9,7 +9,7 @@ module.exports = {
       if (message.author.bot) {return;}
       if (message.messageEmbed) {return;}
       if (message.messageAttachment) {return;}
-
+      if (message.channel.id === '490364243137265666') {return;}
       //if (message.content === self.contains(message, phrase)) {
        //   message.channel.send(response);
             //.catch(console.warn);
@@ -17,6 +17,6 @@ module.exports = {
      // if (message.isMemberMentioned(user) !== undefined) {
      //     console.log(`member ${user} was mentioned!`);
       //}
-       responses.respondToMessage(message);
+      responses.respondToMessage(message);
     }
 }
