@@ -42,12 +42,12 @@ module.exports = {
                 message.channel.send("https://clips.twitch.tv/CorrectProudGerbilNotATK").catch(console.warn);
             }
         }
-        else if (message.author.id === '166494684896559104') {
+        else if (message.author.id === '187937261948502016') {
             if  (utils.chanceOfPosting(25) === true) {
                 message.channel.send("sparkie0_0: i punched my friend's little sister in the head playing wii sports").catch(console.warn);
             }
         }
-        else if (message.author.id === '166494684896559104') {
+        else if (message.author.id === '187937261948502016') {
             if  (utils.chanceOfPosting(100) === true) {
                 message.channel.send("https://www.twitch.tv/sparkie0_0/clip/TubularAgreeableEggplantTBTacoLeft").catch(console.warn);
             }
