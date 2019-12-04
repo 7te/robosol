@@ -89,7 +89,7 @@ module.exports = {
             message.channel.send('https://clips.twitch.tv/MildSpineyGrassPhilosoraptor').catch(console.warn);
         }
         else if (message.content.startsWith("hikaru")) {
-            if  (utils.chanceOfPosting(5) === true) {
+            if  (utils.chanceOfPosting(3) === true) {
                 message.channel.send('"vegans are retarded" - Hikaru 2019').catch(console.warn);
             }
         }
@@ -107,6 +107,9 @@ module.exports = {
         }
         else if (message.content.startsWith("bladee")) {
             message.channel.send('♻️✨♻️✨♻️✨♻️✨♻️✨♻️✨').catch(console.warn);
+        }
+        else if (message.content.startsWith("hey")){
+            message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
         }
         //else if (utils.contains(message.content, 'sol')) {
         //    console.log("sol responses.js trigger");
