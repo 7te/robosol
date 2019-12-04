@@ -117,7 +117,7 @@ module.exports = {
         //    message.channel.send('what').catch(console.warn);
         // }
 
-        else if  (utils.chanceOfPosting(10000)) {
+        else if  (utils.chanceOfPosting(100000)) {
             message.channel.send(process.env.gamerWord);
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
         }

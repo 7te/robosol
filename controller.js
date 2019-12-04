@@ -10,6 +10,7 @@ module.exports = {
       if (message.messageEmbed) {return;}
       if (message.messageAttachment) {return;}
       if (message.channel.id === '490364243137265666') {return;}
+      if (message.channel.id === '651487558165069834') {return;} 
       //if (message.content === self.contains(message, phrase)) {
        //   message.channel.send(response);
             //.catch(console.warn);
