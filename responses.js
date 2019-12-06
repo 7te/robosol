@@ -127,6 +127,10 @@ module.exports = {
         else if (message.content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);
         }
+        else if (message.author.id === "397994368767754260" && message.content === "n"){
+            console.log("ang is thinking it cmonBruh")
+            message.channel.send("i");
+        }
         //if (message.isMemberMentioned(client.user)) {
         //    console.log("got mentionedwowowowwowo");
         //    message.channel.send(tweets[lodash.random(0,tweets.length)].content);
