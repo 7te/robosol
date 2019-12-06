@@ -5,7 +5,7 @@ module.exports = {
      // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;
 
       //i think i need to split this up into more functions bc it feels like a mess
-      //tldr this function is a pile of steaming hot garbage
+      message.content.toLowercase();
       if (message.author.bot) {return;}
       if (message.messageEmbed) {return;}
       if (message.messageAttachment) {return;}

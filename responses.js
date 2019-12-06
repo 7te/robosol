@@ -120,7 +120,7 @@ module.exports = {
         //    message.channel.send('what').catch(console.warn);
         // }
 
-        else if  (utils.chanceOfPosting(100000)) {
+        else if  (utils.chanceOfPosting(1000000)) {
             message.channel.send(process.env.gamerWord);
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
         }
@@ -131,7 +131,9 @@ module.exports = {
         //    console.log("got mentionedwowowowwowo");
         //    message.channel.send(tweets[lodash.random(0,tweets.length)].content);
        // }
-
+        else if (message.mentions.users === "647292354755166261") {
+            message.channel.send("what").catch(console.warn);
+        }
         //annoying thing that doesnt work yet
         else if (message.content.startsWith("oh really")) {
             const currentChannel = message.member.voiceChannel;
