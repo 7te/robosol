@@ -1,6 +1,6 @@
 /*some stuff here :)*/
 const responses = require("./responses");
-import * as utils from "./utils.js";
+
 module.exports = {
     filterMessage: function (message, phrase, response, user, reaction) {
      // const filter = (reaction, user) => reaction.emoji.name === `${reaction}` && user.id === `${user}`;

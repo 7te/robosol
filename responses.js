@@ -9,6 +9,11 @@ const client = new Discord.Client();
 
 module.exports = {
     respondToMessage: function(message, content) {
+        
+        if (message.channel.type == "dm") {
+            console.log("pm triggered");
+            message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
+         }
 
         if (content.startsWith("kz")
         ) {
