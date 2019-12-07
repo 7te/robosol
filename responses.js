@@ -146,7 +146,7 @@ module.exports = {
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
         }
         else if (content === (process.ENV.gamerWordLite)){
-            message.channel.send("https://i.imgur.com/xbSEE7G.png")
+            message.channel.send("https://i.imgur.com/xbSEE7G.png").catch(console.warn())
         }
         else if (content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);
