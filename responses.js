@@ -145,7 +145,7 @@ module.exports = {
             message.channel.send(process.env.gamerWord);
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
         }
-        else if (content === process.ENV.gamerWordLite){
+        else if (content === process.env.gamerWordLite){
             message.channel.send("https://i.imgur.com/xbSEE7G.png").catch(console.warn())
         }
         else if (content === process.env.gamerWord) {
