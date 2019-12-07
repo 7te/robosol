@@ -97,6 +97,11 @@ module.exports = {
                 message.channel.send("https://i.imgur.com/ZDrSNhT.png").catch(console.warn());
             }
         }
+        else if (message.author.id === "") {
+            if (utils.chanceOfPosting(10 === true)) {
+                message.channel.send("my brain is working on overclocker mode 720 jigahertzes nvIDIA 16 FUCKING GISKASKOOLLION IQ CPU MULTICORE SANDY BRIDGIES POOOOOOG!!! i can feel the fuckin small chippy chips in my brain bois tikitikitikitikitik").catch(console.warn)
+            }
+        }
         else if (content === 'wizard game') {
             message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John').catch(console.warn);
         }
@@ -126,6 +131,7 @@ module.exports = {
         else if (content.startsWith("hey")){
             message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
         }
+
         //else if (utils.contains(content, 'sol')) {
         //    console.log("sol responses.js trigger");
         //    message.channel.send('what').catch(console.warn);
@@ -138,6 +144,9 @@ module.exports = {
         else if  (utils.chanceOfPosting(1000000)) {
             message.channel.send(process.env.gamerWord);
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
+        }
+        else if (content === (process.ENV.gamerWordLite)){
+            message.channel.send("https://i.imgur.com/xbSEE7G.png")
         }
         else if (content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);

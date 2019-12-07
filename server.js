@@ -6,7 +6,7 @@
 //
 // "shitpost extraordinaire" (c) 2019+++^*^!
 //
-//soon markov chain >:)
+//
 //🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋
 
 import * as controller from "./controller.js";
