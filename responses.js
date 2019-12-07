@@ -8,23 +8,23 @@ const tweets = require("./tweets.json");
 const client = new Discord.Client();
 
 module.exports = {
-    respondToMessage: function(message) {
+    respondToMessage: function(message, content) {
 
-        if (message.content.startsWith("kz")
+        if (content.startsWith("kz")
         ) {
             if  (utils.chanceOfPosting(2) === true) {
                 message.channel.send("^^^ u lame fa dis 1").catch(console.warn);
                 message.react('🤔');
             }
         }
-        else if (message.content.startsWith("bruh")) {
+        else if (content.startsWith("bruh")) {
             message.channel.send("https://tenor.com/view/bruh-gif-5156041").catch(console.warn);
-              //  .then(message => console.log(`Sent message: ${message.content}`))
+              //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (message.content.startsWith("sex")) {
+        else if (content.startsWith("sex")) {
             message.channel.send("lmao weed").catch(console.warn);
-              //  .then(message => console.log(`Sent message: ${message.content}`))
+              //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
         /* user specific responses below */
@@ -82,36 +82,37 @@ module.exports = {
                 message.channel.send("sick invite").catch(console.warn());
             }
         }
-        else if (message.content === 'wizard game') {
+        else if (content === 'wizard game') {
             message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John').catch(console.warn);
         }
-        else if (message.content === 'pimp is racist') {
+        else if (content === 'pimp is racist') {
             message.channel.send('https://clips.twitch.tv/MildSpineyGrassPhilosoraptor').catch(console.warn);
         }
-        else if (message.content.startsWith("hikaru")) {
+        else if (content.startsWith("hikaru")) {
             if  (utils.chanceOfPosting(3) === true) {
                 message.channel.send('"vegans are retarded" - Hikaru 2019').catch(console.warn);
             }
         }
-        else if (message.content.startsWith("froast")) {
+        else if (content.startsWith("froast")) {
+            console.log(content)
             if  (utils.chanceOfPosting(1) === true) {
                 message.channel.send('<:ResidentSleeper:494484239757082624> 💊').catch(console.warn);
             }
         }
-        else if (message.content.startsWith("mio")) {
+        else if (content.startsWith("mio")) {
             if  (utils.chanceOfPosting(3) === true) {
                 message.channel.send("Cortana, Call Miodayday on Steam").catch(console.warn);
                 message.channel.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
             }
 
         }
-        else if (message.content.startsWith("bladee")) {
+        else if (content.startsWith("bladee")) {
             message.channel.send('♻️✨♻️✨♻️✨♻️✨♻️✨♻️✨').catch(console.warn);
         }
-        else if (message.content.startsWith("hey")){
+        else if (content.startsWith("hey")){
             message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
         }
-        //else if (utils.contains(message.content, 'sol')) {
+        //else if (utils.contains(content, 'sol')) {
         //    console.log("sol responses.js trigger");
         //    message.channel.send('what').catch(console.warn);
         //}
@@ -124,11 +125,10 @@ module.exports = {
             message.channel.send(process.env.gamerWord);
             message.react('<:wideBruh:539948737020297223>').catch(console.warn);
         }
-        else if (message.content === process.env.gamerWord) {
+        else if (content === process.env.gamerWord) {
             message.channel.send("https://tenor.com/view/racist-thats-racist-watermelon-basketball-kfc-gif-5601237").catch(console.warn);
         }
-        else if (message.author.id === "397994368767754260" && message.content === "n"){
-            console.log("ang is thinking it cmonBruh")
+        else if (message.author.id === "397994368767754260" && content === "n"){
             message.channel.send("i");
         }
         //if (message.isMemberMentioned(client.user)) {
@@ -139,7 +139,7 @@ module.exports = {
             message.channel.send("what").catch(console.warn);
         }
         //annoying thing that doesnt work yet
-        else if (message.content.startsWith("oh really")) {
+        else if (content.startsWith("oh really")) {
             const currentChannel = message.member.voiceChannel;
             console.log(currentChannel);
             if (currentChannel !== undefined) {
