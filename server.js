@@ -27,8 +27,6 @@ client.once('ready',() => {
 client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
-    console.log(`${message.author.username}: ${message.content}`);
-
     controller.filterMessage(message);
 });
 

@@ -92,6 +92,11 @@ module.exports = {
                 message.channel.send("i go on mu just to listen to lil uzi vert Luv Is Rage 2 every day").catch(console.warn());
             }
         }
+        else if (message.author.id === "152256820218429441") {
+            if (utils.chanceOfPosting(14 === true)) {
+                message.channel.send("https://i.imgur.com/ZDrSNhT.png").catch(console.warn());
+            }
+        }
         else if (content === 'wizard game') {
             message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John').catch(console.warn);
         }
@@ -140,10 +145,6 @@ module.exports = {
         else if (message.author.id === "397994368767754260" && content === "n"){
             message.channel.send("i");
         }
-        //if (message.isMemberMentioned(client.user)) {
-        //    console.log("got mentionedwowowowwowo");
-        //    message.channel.send(tweets[lodash.random(0,tweets.length)].content);
-       // }
         else if (message.mentions.users === "647292354755166261") {
             message.channel.send("what").catch(console.warn);
         }
