@@ -82,6 +82,11 @@ module.exports = {
                 message.channel.send("sick invite").catch(console.warn());
             }
         }
+        else if (message.author.id === "163176601280970752") {
+            if (utils.chanceOfPosting(30 === true)) {
+                message.channel.send("i go on mu just to listen to lil uzi vert Luv Is Rage 2 every day").catch(console.warn());
+            }
+        }
         else if (content === 'wizard game') {
             message.channel.send('https://clips.twitch.tv/MiniatureDeafDragonflyTF2John').catch(console.warn);
         }
@@ -102,7 +107,6 @@ module.exports = {
         else if (content.startsWith("mio")) {
             if  (utils.chanceOfPosting(3) === true) {
                 message.channel.send("Cortana, Call Miodayday on Steam").catch(console.warn);
-                message.channel.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
             }
 
         }
@@ -141,10 +145,12 @@ module.exports = {
         //annoying thing that doesnt work yet
         else if (content ==="oh really") {
             console.log("oh rly triggered")
+            console.log(message.member.voiceChannel);
             const currentChannel = message.member.voiceChannel;
             console.log(currentChannel);
             if (currentChannel !== undefined) {
                 currentChannel.join();
+                console.log("voice joined")
                 client.channels.get("459848241819811841").send("!play oh really young thug")
                     .then(connection => setInterval(client.voiceChannel.leave(), 5000));
             }
