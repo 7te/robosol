@@ -28,6 +28,11 @@ client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
     console.log(`${message.author.username}: ${message.content}`);
+    
+    if(message.channel.type == "dm") {
+        console.log("pm triggered");
+        message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
+     }
 
     controller.filterMessage(message);
 });

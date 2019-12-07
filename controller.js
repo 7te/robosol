@@ -11,10 +11,6 @@ module.exports = {
       if (message.messageAttachment) {return;}
       if (message.channel.id === '490364243137265666') {return;}
       if (message.channel.id === '651487558165069834') {return;} 
-      if(message.channel.type == "dm") {
-        console.log("pm triggered");
-        message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
-     }
       let messageContentSanitized =  message.content.toLowerCase();
       //if (message.content === self.contains(message, phrase)) {
        //   message.channel.send(response);
