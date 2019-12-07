@@ -9,7 +9,7 @@ const client = new Discord.Client();
 
 module.exports = {
     respondToMessage: function(message, content) {
-        
+
         if (message.channel.type == "dm") {
             console.log("pm triggered");
             message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
@@ -150,9 +150,8 @@ module.exports = {
         //annoying thing that doesnt work yet
         else if (content ==="oh really") {
             console.log("oh rly triggered")
-            console.log(message.member.voiceChannel);
-            const currentChannel = message.member.voiceChannel;
-            console.log(currentChannel);
+            console.log(message.member.voiceChannel.id);
+            const currentChannel = message.member.voiceChannel.id;
             if (currentChannel !== undefined) {
                 currentChannel.join();
                 console.log("voice joined")
