@@ -9,7 +9,7 @@
 //
 //🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋
 
-import * as controller from "./controller.js";
+import * as controller from "./src/controller.js";
 const Discord = require("discord.js");
 const client = new Discord.Client();
 //const config = require("./config.js");
@@ -27,10 +27,7 @@ client.once('ready',() => {
 client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
-    let timerStart = performance.now();
     controller.filterMessage(message);
-    let timerEnd = performance.now();
-    console.log('Processing of message completed in ' + (timerEnd - timerStart) + ' ms');
 });
 
 //utils.postRandomTweet();

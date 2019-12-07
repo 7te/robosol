@@ -64,4 +64,5 @@ node_modules/
 config.js
 .env
 logs.txt
+tweets.json
 .code-workspace
