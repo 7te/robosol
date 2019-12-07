@@ -139,7 +139,8 @@ module.exports = {
             message.channel.send("what").catch(console.warn);
         }
         //annoying thing that doesnt work yet
-        else if (content.startsWith("oh really")) {
+        else if (content ==="oh really") {
+            console.log("oh rly triggered")
             const currentChannel = message.member.voiceChannel;
             console.log(currentChannel);
             if (currentChannel !== undefined) {
