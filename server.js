@@ -27,7 +27,10 @@ client.once('ready',() => {
 client.on("message", (message) => {
     //for each message that gets sent in any channel
     //we check to see if it meets certain criteria
+    let timerStart = performance.now();
     controller.filterMessage(message);
+    let timerEnd = performance.now();
+    console.log('Processing of message completed in ' + (timerEnd - timerStart) + ' ms');
 });
 
 //utils.postRandomTweet();
