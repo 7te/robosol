@@ -96,7 +96,7 @@ module.exports = {
                 message.channel.send("https://i.imgur.com/ZDrSNhT.png").catch(console.warn());
             }
         }
-        else if (message.author.id === "") {
+        else if (message.author.id === "204060249827704832") {
             if (utils.chanceOfPosting(10 === true)) {
                 message.channel.send("my brain is working on overclocker mode 720 jigahertzes nvIDIA 16 FUCKING GISKASKOOLLION IQ CPU MULTICORE SANDY BRIDGIES POOOOOOG!!! i can feel the fuckin small chippy chips in my brain bois tikitikitikitikitik").catch(console.warn)
             }
@@ -129,6 +129,9 @@ module.exports = {
         }
         else if (content.startsWith("hey")){
             message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
+        }
+        else if (content.startsWith("rock" || "paper" || "scissors")){
+            message.channel.send("rock");
         }
 
         //else if (utils.contains(content, 'sol')) {
