@@ -121,7 +121,7 @@ module.exports = {
         else if (content.startsWith("hey")){
             message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
         }
-        else if (content.startsWith("rock" || "paper" || "scissors")){
+        else if (content.startsWith("rock") || content.startsWith("paper") || content.startsWith("scissors")){
             message.channel.send("rock");
         }
         else if (content.startsWith("jeff bezos")) {
@@ -230,7 +230,9 @@ module.exports = {
 
         else if  (utils.chanceOfPosting(300)) {
             message.channel.send("Tryna make a change :--/");
-
+        }
+        else if (utils.chanceOfPosting(200)) {
+            message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
         }
         else if (content === process.env.gamerWordLite){
             message.channel.send("https://i.imgur.com/xbSEE7G.png").catch(console.warn())
@@ -245,7 +247,7 @@ module.exports = {
             message.channel.send("what").catch(console.warn);
         }
         //annoying thing that doesnt work yet, think this has to do with 
-        else if (content ==="oh really") {
+        else if (content.startsWith ==="oh really") {
             console.log("oh rly triggered")
             console.log(message.member.voiceChannel.id);
             const currentChannel = message.member.voiceChannel.id;
