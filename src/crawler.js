@@ -18,6 +18,7 @@ const config  = {
     access_token_secret : process.env.access_token_secret
 };
 
+// these should be environmental variables as well or maybe read from a file in the local directory
 const usernames = [
     "dril",
     "BaskingBall1",
