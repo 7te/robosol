@@ -4,7 +4,7 @@
 // | | | (_) | |_) | (_) \__ \ (_) | |
 // |_|  \___/|_.__/ \___/|___/\___/|_|
 //
-// "shitpost extraordinaire" (c) 2019+++^*^!
+// 
 //
 //
 //🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋🐍💚🦋
@@ -19,7 +19,7 @@ const client = new Discord.Client();
 // utils is helper utilities for discordjs or variables to make this more legible
 
 client.once('ready',() => {
-    client.user.setActivity('Destory Human');
+    client.user.setActivity('now turing complete');
     // ^ this part is crucial
     console.log(`robosol has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
 });

@@ -1,5 +1,5 @@
 /*
-*i can already feel that this is goin to be a shitshow too B)
+* this is a poor implementation, but this implementation also works
 */
 import * as utils from "./utils.js";
 const Discord = require("discord.js");
@@ -11,7 +11,6 @@ module.exports = {
     respondToMessage: function(message, content) {
 
         if (message.channel.type == "dm") {
-            console.log("pm triggered");
             message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
          }
 
@@ -48,7 +47,12 @@ module.exports = {
             }
         }
         else if (message.author.id === '187937261948502016') {
-            if  (utils.chanceOfPosting(25) === true) {
+            if  (utils.chanceOfPosting(100) === true) {
+                message.channel.send("https://www.twitch.tv/sparkie0_0/clip/TubularAgreeableEggplantTBTacoLeft").catch(console.warn);
+            }
+        }
+        /* else if (message.author.id === '187937261948502016') {
+            if  (utils.chanceOfPosting(999999) === true) {
                 message.channel.send("sparkie0_0: i punched my friend's little sister in the head playing wii sports").catch(console.warn);
             }
         }
@@ -56,7 +60,7 @@ module.exports = {
             if  (utils.chanceOfPosting(100) === true) {
                 message.channel.send("https://www.twitch.tv/sparkie0_0/clip/TubularAgreeableEggplantTBTacoLeft").catch(console.warn);
             }
-        }
+        } */
         else if (message.author.id === '272656844894502913') {
             if  (utils.chanceOfPosting(10) === true) {
                 message.channel.send("yo stockfish AI level 1 has been beating my ass all night").catch(console.warn);
@@ -97,7 +101,7 @@ module.exports = {
                 message.channel.send("https://i.imgur.com/ZDrSNhT.png").catch(console.warn());
             }
         }
-        else if (message.author.id === "") {
+        else if (message.author.id === "204060249827704832") {
             if (utils.chanceOfPosting(10 === true)) {
                 message.channel.send("my brain is working on overclocker mode 720 jigahertzes nvIDIA 16 FUCKING GISKASKOOLLION IQ CPU MULTICORE SANDY BRIDGIES POOOOOOG!!! i can feel the fuckin small chippy chips in my brain bois tikitikitikitikitik").catch(console.warn)
             }
@@ -130,6 +134,12 @@ module.exports = {
         }
         else if (content.startsWith("hey")){
             message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
+        }
+        else if (content.startsWith("rock" || "paper" || "scissors")){
+            message.channel.send("rock");
+        }
+        else if (content === "bezos") {
+            message.channel.send("https://no-ani.me/i/s1ey.jpg")
         }
 
         //else if (utils.contains(content, 'sol')) {

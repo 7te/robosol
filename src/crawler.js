@@ -73,7 +73,8 @@ const generateTweetFile = function () {
 };
 
 const closeTweetFile = function () {
-    //this doesnt work rofl u have to do it manually
+    //this doesnt work and its not a huge deal to me at this point
+    //you have to use sed in your terminal or else it won't work
     console.log('ran closetweet');
     if (trueIndex === fakeIndex) {
         console.log('reached TrueIndex');

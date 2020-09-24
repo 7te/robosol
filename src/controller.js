@@ -11,8 +11,10 @@ module.exports = {
       if (message.messageAttachment) {return;}
       if (message.channel.id === '490364243137265666') {return;}
       if (message.channel.id === '651487558165069834') {return;} 
+      if (message.channel.id === '653038967486152724') {return;}
+      if (message.channel.id === '651487558165069834') {return;}
       console.log(`${message.author.username}: ${message.content}`);
-      let messageContentSanitized =  message.content.toLowerCase();
+      let messageContentSanitized = message.content.toLowerCase();
       //if (message.content === self.contains(message, phrase)) {
        //   message.channel.send(response);
             //.catch(console.warn);
