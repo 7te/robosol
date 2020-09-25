@@ -75,7 +75,8 @@ const generateTweetFile = function () {
 
 const closeTweetFile = function () {
     //this doesnt work and its not a huge deal to me at this point
-    //you have to use sed in your terminal or else it won't work
+    //you have to add a ] on a new line at end of file for it to be correct json
+    // you can do this either in a text editor or with sed 
     console.log('ran closetweet');
     if (trueIndex === fakeIndex) {
         console.log('reached TrueIndex');

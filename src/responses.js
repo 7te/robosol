@@ -32,7 +32,7 @@ module.exports = {
               //  .catch(console.error);
         }
         else if (content.startsWith("fuck")) {
-            message.channel.send("yeah fuck !").catch(console.warn);
+            message.channel.send("yeah  fuck     !").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
@@ -146,7 +146,7 @@ module.exports = {
             }
         }
         else if (message.author.id === '187937261948502016') {
-            if  (utils.chanceOfPosting(100) === true) {
+            if  (utils.chanceOfPosting(200) === true) {
                 message.channel.send("https://www.twitch.tv/sparkie0_0/clip/TubularAgreeableEggplantTBTacoLeft").catch(console.warn);
             }
         }
