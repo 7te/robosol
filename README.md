@@ -3,6 +3,8 @@
 
 the twitter crawler (crawler.js & the generated tweets.json) and the discord bot (server.js and everything else) are kind of separate things. I started with some default discord bot stuff and robosol has become his own monolith over time as I've added new features and improved aspects of it. 
 
+intelligent people might be wondering, why does this repo use lodash? unintelligent people would answer "i don't remember why i thought i needed lodash" 
+
 ## twitter crawler
 
 My workflow with this is that I run the twitter crawler locally and then upload tweets.json to heroku, so it may break given that other people would probably not be doing the exact same thing as I am with it. I'd love a bug report or a PR for it if someone else used it and had issues, though.

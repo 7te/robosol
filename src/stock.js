@@ -3,6 +3,8 @@ const Discord = require("discord.js");
 const lodash = require("lodash");
 const client = new Discord.Client();
 
+
+//this should be in a .json but i want to get to an alpha state first :)
 const playerStock = [
     {name="sol", uid="204060249827704832", value="100", cash="200"},
     {name="rfunk", uid="118137338369933313", value="100", cash="200"},
@@ -20,9 +22,12 @@ const playerStock = [
     {name="sparkie", uid="187937261948502016", value="100", cash="200"},
     {name="cap", uid="149238310286393344", value="100", cash="200"},
 ]
+const commands = [
+
+]
 
 let allowance = 20;
-
+const prefix = "^"
 const marketFluctuates = function (){
 
 }
