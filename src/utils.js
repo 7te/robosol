@@ -5,6 +5,7 @@ const lodash = require("lodash");
 const tweets = require("./tweets.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
+
  module.exports = {
 
     chanceOfPosting: function (chance) {
@@ -37,7 +38,7 @@ const client = new Discord.Client();
                     return true;
                 }
                 //return (message[i] ? word : "");
-                //oh god i forgot how ternary operators work
+                //i for some reason never use ternary operators so i'll have to refresh at some point and fix this 
             }
         }
 

@@ -23,9 +23,11 @@ const playerStock = [
 
 let allowance = 20;
 
+const marketFluctuates = function (){
 
+}
 
-const valueChange = function (user, name, buy, sell) {
+const buySellStocks = function (user, name, buy, sell) {
 
     if (user === buy){
         playerStock.value += buy;

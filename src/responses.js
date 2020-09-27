@@ -94,7 +94,7 @@ module.exports = {
             }
         }
         else if (content.startsWith("nykan")) {
-            if  (utils.chanceOfPosting(2) === true) {
+            if  (utils.chanceOfPosting(4) === true) {
                 message.channel.send('https://www.twitch.tv/nykan/clip/RelievedHumbleYamPartyTime').catch(console.warn);
             }
         }
@@ -210,9 +210,9 @@ module.exports = {
             if (utils.chanceOfPosting(50 === true)) {
                 message.channel.send("my brain is working on overclocker mode 720 jigahertzes nvIDIA 16 FUCKING GISKASKOOLLION IQ CPU MULTICORE SANDY BRIDGIES POOOOOOG!!! i can feel the fuckin small chippy chips in my brain bois tikitikitikitikitik").catch(console.warn)
             }
-            if (utils.chanceOfPosting(2 === true)) {
+            /*if (utils.chanceOfPosting(2 === true)) {
                 message.channel.send("dr pewdiepie?").catch(console.warn)
-            }
+            }*/
         }
         else if (message.author.id === "204060249827704832") {
             if (utils.chanceOfPosting(50 === true)) {
@@ -232,7 +232,7 @@ module.exports = {
             message.channel.send("Tryna make a change :--/");
         }
         else if (utils.chanceOfPosting(200)) {
-            message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
+            message.channel.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
         }
         else if (content === process.env.gamerWordLite){
             message.channel.send("https://i.imgur.com/xbSEE7G.png").catch(console.warn())
