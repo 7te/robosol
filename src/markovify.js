@@ -1,3 +1,5 @@
+const { fstat } = require("fs");
+
 function markovMe() {
     const markovChain = {}
     const textArr = document.getElementById('inputBox').value.split(' ')
@@ -19,5 +21,5 @@ function markovMe() {
       word = newWord;
       if (!word || !markovChain.hasOwnProperty(word)) word = words[Math.floor(Math.random() * words.length)]
     }
-    document.getElementById('markovResults').innerText = result;
+   // Node.fstat = result;
   } 
