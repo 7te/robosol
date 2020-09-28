@@ -1,4 +1,5 @@
 import * as utils from "./utils.js";
+import * as settings from "./settings.json"
 const Discord = require("discord.js");
 const lodash = require("lodash");
 const client = new Discord.Client();
@@ -23,7 +24,7 @@ const playerStock = [
     {name="cap", uid="149238310286393344", value="100", cash="200"},
 ]
 const commands = [
-
+    {command="buy", uid=Number,}
 ]
 
 let allowance = 20;
