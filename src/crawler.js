@@ -29,7 +29,8 @@ const usernames = [
     "FakeCat_Fancy",
     "famouscrab",
     "imagoonassniqqa",
-    "Veggiefact"
+    "Veggiefact",
+    "gamerwoadie"
 ];
 
 let params = {
@@ -80,6 +81,7 @@ const closeTweetFile = function () {
     console.log('ran closetweet');
     if (trueIndex === fakeIndex) {
         console.log('reached TrueIndex');
+        //havent messed with this in months but if i newline before the ] will it work then?
         fs.appendFileSync('tweets.json', `]`, function (err) {
 
             console.log(err);
