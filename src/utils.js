@@ -29,6 +29,8 @@ const client = new Discord.Client();
     },
 
     contains: function (message, word) {
+
+        //this sucks!!!!!!! 
         console.log(message, word);
         if (message.content) {
             let messageArray = message.content.split(" ");

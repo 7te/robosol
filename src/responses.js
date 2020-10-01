@@ -72,10 +72,13 @@ module.exports = {
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("son")) {
+        else if (content.startsWith("son ")) {
             message.channel.send("https://media.discordapp.net/attachments/697681133013434381/738164415949570118/bladee.png?width=722&height=704").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
+        }
+        else if (content.startsWith("good night") || content.startsWith("bed time")) {
+            message.channel.send("https://cdn.discordapp.com/attachments/446875598489649173/761092482401304626/image0.jpg")
         }
         else if (content.startsWith("israel")) {
             message.channel.send("https://twitter.com/Lilpeep/status/656143261829046272?s=20").catch(console.warn);
@@ -125,7 +128,7 @@ module.exports = {
             message.channel.send("rock");
         }
         else if (content.startsWith("jeff bezos")) {
-            message.channel.send("worshipp !")
+            message.channel.send("worshipp 💕❤💖❤!")
         }
         else if (content.startsWith("slipknot")) {
             message.channel.send("https://www.youtube.com/watch?v=STT-PEaCOtg")
