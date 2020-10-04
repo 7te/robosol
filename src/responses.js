@@ -1,5 +1,17 @@
 /*
 * this is a poor implementation, but this implementation also works
+*https://i.elixi.re/i/feyi.jpg
+https://i.elixi.re/i/kd92.jpg
+https://256.sh/i/k4cx.jpg
+https://i.elixi.re/i/5b04.jpg
+https://256.sh/i/vysl.jpg
+https://256.sh/i/lf9p.jpg
+https://i.elixi.re/i/11x5.jpg
+https://256.sh/i/d1f2.jpg
+https://i.elixi.re/i/s1ey.jpg
+https://256.sh/i/zkuw.png
+https://i.elixi.re/i/x593.jpg
+https://i.elixi.re/i/kd92.jpg
 */
 import * as utils from "./utils.js";
 const Discord = require("discord.js");
