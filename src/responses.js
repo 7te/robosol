@@ -137,7 +137,7 @@ module.exports = {
             message.channel.send("👋 hey lil 💦 piss 🍼 baby 🥺 you think 🤔 you're so 💢 fucking 😎 cool? ❄️ huh? 😤you think 🤔 you're so 💢 fucking tough? you talk 💁‍♀️ a lotta 🤑 BIG 🕹 GAME 🎲 for someone with such a 👌 small 🚘 truck 🚚 aww 🐰 look 👀 at those 💪 arms your 💪 arms look 👀 so 💢 fucking 🌸 cute 💕 they look 👀 like little 👌cigarettes 🚬 I bet I could 💨smoke 😤 you, I could ♨️ roast you 🔥 and then you'd ❤️ love it 💕 and you'd 📳 text 🔤 me I 💖 love 💘 you ❣️ and then 🕣 I'd 💢 fucking 👻 GHOST 🖕YOU 💀").catch(console.warn());
         }
         else if (content.startsWith("rock") || content.startsWith("paper") || content.startsWith("scissors")){
-            message.channel.send("rock");
+            if (utils.chanceOfPosting(3)) {message.channel.send("rock")} else {message.channel.send("paper")}
         }
         else if (content.startsWith("jeff bezos")) {
             message.channel.send("worshipp 💕❤💖❤!")
