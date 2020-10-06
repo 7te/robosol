@@ -1,5 +1,5 @@
 /*
-* this is a poor implementation, but this implementation also works
+* this is a poor implementation, but this implementation also works without fail, and that has value.
 *https://i.elixi.re/i/feyi.jpg
 https://i.elixi.re/i/kd92.jpg
 https://256.sh/i/k4cx.jpg
@@ -33,17 +33,17 @@ module.exports = {
                 message.react('🤔');
             }
         }
-        else if (content.startsWith("bruh")) {
+        else if (content.startsWith("bruh ")) {
             message.channel.send("https://tenor.com/view/bruh-gif-5156041").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("sex")) {
+        else if (content.startsWith("sex ")) {
             message.channel.send("lmao weed").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("fuck")) {
+        else if (content.startsWith("fuck ")) {
             message.channel.send("yeah  fuck     !").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
@@ -63,23 +63,23 @@ module.exports = {
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("pain")) {
+        else if (content.startsWith("pain ")) {
             message.channel.send("pain meme is unfunny now come up with something new").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("stan")) {
+        else if (content.startsWith("stan ")) {
             message.channel.send("STAN JUNGKOOK").catch(console.warn);
             message.react('😤');
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("daddy")) {
+        else if (content.startsWith("daddy ")) {
             message.channel.send("sol ???").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("sup")) {
+        else if (content.startsWith("sup ")) {
             message.channel.send("Sup Nicki Minaj? Sittin here fantasizin bout layin you on yo stomach, and tootin that big ole red ass up, and spreadin and foldin them big ole red ass cheeks, and long dickin that pussy til it’s squirtin and fartin, squirtin and fartin, squrtin and fartin. Got that dookiehole soakin wet, soakin wet, soakin wet. You throwin it back and it’s grippin and huggin, grippin and huggin, grippin and huggin the dick. And I’m makin it grip and fart, grip and fart, grip and fart. Stroke got the— stroke got the— stroke makin the pussy squirt and fart, squirt and fart, squirt and fart. You throwin it back and it’s grippin and huggin, grippin and huggin, grippin and huggin the dick. And I’m still here got it grippin and fartin, grippin and fartin, grippin and fartin, grippin and fartin, grippin and fartin. Every stroke I’m hittin the core makin it fart. Every stroke I’m hittin the core makin it fart. Every stroke I’m hittin the core in the bottom of the pussy makin it fart and fart and fart, you moan and moan—").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
