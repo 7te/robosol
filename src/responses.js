@@ -148,16 +148,21 @@ module.exports = {
 
 
         /* user specific responses below */
+        // (utils.chanceOfPosting makes it semi random if robosol responds, the higher the number
+        // the more unlikely it is to happen
         else if (message.author.id === '107504074068361216') {
             if  (utils.chanceOfPosting(12) === true) {
                 message.channel.send("https://i.imgur.com/UyKwfHD.png").catch(console.warn);
             }
         }
+        else if (message.author.id === '118137338369933313') {
+            if  (utils.chanceOfPosting(300) === true) {
+                message.channel.send("https://i.imgur.com/UyKwfHD.png").catch(console.warn);
+            }
+        }
         else if (message.author.id === '166494684896559104') {
             if  (utils.chanceOfPosting(500) === true) {
-                // (utils.chanceOfPosting makes it semi random if robosol responds, the higher the number
-                // the more unlikely it is to happen
-                message.channel.send("geminitay quivering unffffffffff").catch(console.warn);
+                message.channel.send("https://256.sh/i/dfvb.png").catch(console.warn);
             }
         }
         else if (message.author.id === '187937261948502016') {
@@ -184,7 +189,7 @@ module.exports = {
             }
         }
         else if (message.author.id === "112397143179866112") {
-            if  (utils.chanceOfPosting(200) === true) {
+            if  (utils.chanceOfPosting(250) === true) {
                 message.channel.send("I'd fuck the shit out of sneaky - jord 2019").catch(console.warn);
             }
         }
