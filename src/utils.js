@@ -24,25 +24,29 @@ const client = new Discord.Client();
         //words.match(regex);
         const cleanedTweet = tweet
             .replace(/@/g,'')
+            .replace(/RT/g,'')
             .replace(/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/, '');
         return cleanedTweet;
     },
 
     contains: function (message, word) {
-
+        console.log("contains triggered")
+        word.test(message);
+        console.log("regex tested")
         //this sucks!!!!!!! 
-        console.log(message, word);
-        if (message.content) {
-            let messageArray = message.content.split(" ");
-            for (let i = 0; i < messageArray.length; i++ ){
-                if (message[i] === word){
-                    console.log("widePeepoHappy");
-                    return true;
-                }
-                //return (message[i] ? word : "");
-                //i for some reason never use ternary operators so i'll have to refresh at some point and fix this 
-            }
-        }
+        //apparently I can just use .includes() anyway? even though it is less performant than test()
+        // console.log(message, word);
+        // if (message.content) {
+        //     let messageArray = message.content.split(" ");
+        //     for (let i = 0; i < messageArray.length; i++ ){
+        //         if (message[i] === word){
+        //             console.log("widePeepoHappy");
+        //             return true;
+        //         }
+        //         //return (message[i] ? word : "");
+        //         //i for some reason never use ternary operators so i'll have to refresh at some point and fix this 
+        //     }
+        // }
 
     },
     postRandomTweet: function () {
