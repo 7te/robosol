@@ -118,6 +118,11 @@ module.exports = {
             message.channel.send('https://www.twitch.tv/ijust_tv/clip/PreciousMushyMuleSoonerLater').catch(console.warn);
 
         }
+        else if (content.startsWith("zach")) {
+
+            message.channel.send('Zach Was right about Everythign').catch(console.warn);
+
+        }
         else if (content.startsWith("froast")) {
             console.log(content)
             if  (utils.chanceOfPosting(1) === true) {
@@ -142,6 +147,9 @@ module.exports = {
         else if (content.startsWith("jeff bezos")) {
             message.channel.send("worshipp 💕❤💖❤!")
         }
+        else if (content.includes(" jeff ")) {
+            message.channel.send("🐍🐍💚🖤💚🐍🐍")
+        }
         else if (content.startsWith("slipknot")) {
             message.channel.send("https://www.youtube.com/watch?v=STT-PEaCOtg")
         }
@@ -153,6 +161,11 @@ module.exports = {
         else if (message.author.id === '107504074068361216') {
             if  (utils.chanceOfPosting(12) === true) {
                 message.channel.send("https://i.imgur.com/UyKwfHD.png").catch(console.warn);
+            }
+        }
+        else if (message.author.id === '118137338369933313') {
+            if  (utils.chanceOfPosting(5) === true) {
+                message.channel.send("#defundrobosol - rex 2020").catch(console.warn);
             }
         }
         else if (message.author.id === '118137338369933313') {

@@ -1,4 +1,5 @@
 # robosol
+
 ### discord bot to annoy my friends
 
 the twitter crawler (crawler.js & the generated tweets.json) and the discord bot (server.js and everything else) are kind of separate things. I started with some default discord bot stuff and robosol has become his own monolith over time as I've added new features and improved aspects of it. 
@@ -13,10 +14,18 @@ However, it should be somewhat reusable, and it probably should some day live in
 
 ## discord user markov generator 
 
-tbd
+ondafknweighbaidaweigh in moments!!!
 
 ## discord user stocks
 
 assign numerical values to discord users! (also tbd)
 
 ![thugdance](https://media.giphy.com/media/nhPoFaLtbp6bS/giphy.gif)
+
+### todo
+
+split stocks, markov generator, twitter crawler into their own repositories, add some of them to npm
+
+containerise parts of robosol in case anyone else wanted to use it as a base
+
+and more!
