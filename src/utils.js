@@ -7,7 +7,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
  module.exports = {
-
+    //this shit sucks lol!
+    
     chanceOfPosting: function (chance) {
         if (lodash.random(1,chance) === chance) {
             return true;

@@ -84,7 +84,7 @@ module.exports = {
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("son ")) {
+        else if (content.startsWith("son")) {
             message.channel.send("https://media.discordapp.net/attachments/697681133013434381/738164415949570118/bladee.png?width=722&height=704").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
@@ -145,10 +145,12 @@ module.exports = {
             if (utils.chanceOfPosting(3)) {message.channel.send("rock")} else {message.channel.send("paper")}
         }
         else if (content.startsWith("jeff bezos")) {
-            message.channel.send("worshipp 💕❤💖❤!")
+            message.channel.send("worshipp 💕❤💖❤!");
         }
-        else if (content.includes(" jeff ")) {
-            message.channel.send("🐍🐍💚🖤💚🐍🐍")
+        else if (content.includes("jeff ")) {
+            //might need to nest above ^ here
+
+            message.channel.send("🐍🐍💚KING SLIME💚🐍🐍");
         }
         else if (content.startsWith("slipknot")) {
             message.channel.send("https://www.youtube.com/watch?v=STT-PEaCOtg")
@@ -279,7 +281,7 @@ module.exports = {
         else if (message.mentions.users === "647292354755166261") {
             message.channel.send("what").catch(console.warn);
         }
-        //annoying thing that doesnt work yet, think this has to do with 
+        //"annoying thing that doesnt work yet, think this has to do with" ...bro what was i trying to say and where did the rest of it go...
         else if (content.startsWith ==="oh really") {
             console.log("oh rly triggered")
             console.log(message.member.voiceChannel.id);
