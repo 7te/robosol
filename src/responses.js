@@ -55,7 +55,7 @@ module.exports = {
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.contains("league")) {
+        else if (content.startsWith("league")) {
             message.channel.send("stop playing leeago legnd its melting ur brain").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
