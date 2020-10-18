@@ -176,10 +176,15 @@ module.exports = {
                 message.channel.send("dr pewdiepie?").catch(console.warn)
             }*/
         }
-        
+
         else if (message.author.id === '107504074068361216') {
             if  (utils.chanceOfPosting(12) === true) {
                 message.channel.send("https://i.imgur.com/UyKwfHD.png").catch(console.warn);
+            }
+        }
+        else if (message.author.id === '272656844894502913') {
+            if  (utils.chanceOfPosting(69) === true) {
+                message.channel.send("https://www.youtube.com/watch?v=SChcOpTdh4A").catch(console.warn);
             }
         }
         else if (message.author.id === '118137338369933313') {
@@ -210,6 +215,11 @@ module.exports = {
         else if (message.author.id === '166494684896559104') {
             if  (utils.chanceOfPosting(500) === true) {
                 message.channel.send("https://256.sh/i/dfvb.png").catch(console.warn);
+            }
+        }
+        else if (message.author.id === '149238310286393344') {
+            if  (utils.chanceOfPosting(500) === true) {
+                message.channel.send("https://256.sh/i/01mp.png").catch(console.warn);
             }
         }
         else if (message.author.id === '187937261948502016') {
