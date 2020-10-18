@@ -12,6 +12,9 @@ https://i.elixi.re/i/s1ey.jpg
 https://256.sh/i/zkuw.png
 https://i.elixi.re/i/x593.jpg
 https://i.elixi.re/i/kd92.jpg
+
+https://256.sh/i/k3du.png
+whoobie pic ^
 */
 import * as utils from "./utils.js";
 const Discord = require("discord.js");
@@ -25,8 +28,9 @@ module.exports = {
         if (message.channel.type == "dm") {
             message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
          }
-         if (message.channel.type == "dm" && message.author.id === "me") {
-            message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
+
+         if (message.channel.type == "dm" && message.author.id === "204060249827704832") {
+            message.author.send(message.content);
          }
 
         if (content.startsWith("kz")
@@ -47,11 +51,11 @@ module.exports = {
               //  .catch(console.error);
         }
         else if (content.startsWith("fuck ")) {
-            message.channel.send("yeah  fuck     !").catch(console.warn);
+            message.channel.send("im also Fuck").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
         }
-        else if (content.startsWith("league")) {
+        else if (content.contains("league")) {
             message.channel.send("stop playing leeago legnd its melting ur brain").catch(console.warn);
               //  .then(message => console.log(`Sent message: ${content}`))
               //  .catch(console.error);
@@ -169,8 +173,23 @@ module.exports = {
             }
         }
         else if (message.author.id === '118137338369933313') {
-            if  (utils.chanceOfPosting(5) === true) {
-                message.channel.send("#defundrobosol - rex 2020").catch(console.warn);
+            if  (utils.chanceOfPosting(10) === true) {
+                message.channel.send('"I JUST FUCKING HIT AN OWNAGE" - rex 2017').catch(console.warn);
+            }
+        }
+        else if (message.author.id === '244280969551413249') {
+            if (utils.chanceOfPosting(30) === true) {
+                message.channel.send('"why are all the gay people good at cartwheels?" - spencer 2020').catch(console.warn);
+            }
+        }
+        else if (message.author.id === '132304731891564544') {
+            if (utils.chanceOfPosting(70) === true) {
+                message.channel.send('https://www.youtube.com/watch?v=7pWSVZvI4sY').catch(console.warn);
+            }
+        }
+        else if (message.author.id === '267742762403627008') {
+            if (utils.chanceOfPosting(40) === true) {
+                message.channel.send(' **poland voice** "something is wrong with the trans people" - karo').catch(console.warn);
             }
         }
         else if (message.author.id === '118137338369933313') {
@@ -222,7 +241,7 @@ module.exports = {
             }
         }
         else if (message.author.id === "267508270208385026") {
-            if (utils.chanceOfPosting(100 === true)){
+            if (utils.chanceOfPosting(10 === true)){
                 message.channel.send("sick invite").catch(console.warn());
             }
         }
