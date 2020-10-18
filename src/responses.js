@@ -30,7 +30,7 @@ module.exports = {
          }
 
          if (message.channel.type == "dm" && message.author.id === "204060249827704832") {
-            message.author.send(message.content);
+            message.author.send(content);
          }
 
         if (content.startsWith("kz")
@@ -167,6 +167,16 @@ module.exports = {
         /* user specific responses below */
         // (utils.chanceOfPosting makes it semi random if robosol responds, the higher the number
         // the more unlikely it is to happen
+        else if (message.author.id === "204060249827704832") {
+            if (utils.chanceOfPosting(1 === true)) {
+                console.log("I LOVE YOUUUUUUUUUUU 😻💕💕💕")
+                message.channel.send("my brain is working on overclocker mode 720 jigahertzes nvIDIA 16 FUCKING GISKASKOOLLION IQ CPU MULTICORE SANDY BRIDGIES POOOOOOG!!! i can feel the fuckin small chippy chips in my brain bois tikitikitikitikitik").catch(console.warn)
+            }
+            /*if (utils.chanceOfPosting(2 === true)) {
+                message.channel.send("dr pewdiepie?").catch(console.warn)
+            }*/
+        }
+        
         else if (message.author.id === '107504074068361216') {
             if  (utils.chanceOfPosting(12) === true) {
                 message.channel.send("https://i.imgur.com/UyKwfHD.png").catch(console.warn);
@@ -262,14 +272,6 @@ module.exports = {
             if (utils.chanceOfPosting(500 === true)) {
                 message.channel.send("https://www.twitch.tv/exaroh/clip/SpoopyFunBoarLeeroyJenkins").catch(console.warn());
             }
-        }
-        else if (message.author.id === "204060249827704832") {
-            if (utils.chanceOfPosting(50 === true)) {
-                message.channel.send("my brain is working on overclocker mode 720 jigahertzes nvIDIA 16 FUCKING GISKASKOOLLION IQ CPU MULTICORE SANDY BRIDGIES POOOOOOG!!! i can feel the fuckin small chippy chips in my brain bois tikitikitikitikitik").catch(console.warn)
-            }
-            /*if (utils.chanceOfPosting(2 === true)) {
-                message.channel.send("dr pewdiepie?").catch(console.warn)
-            }*/
         }
         else if (message.author.id === "204060249827704832") {
             if (utils.chanceOfPosting(50 === true)) {
