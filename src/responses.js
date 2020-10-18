@@ -25,6 +25,9 @@ module.exports = {
         if (message.channel.type == "dm") {
             message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
          }
+         if (message.channel.type == "dm" && message.author.id === "me") {
+            message.author.send(utils.parseTweetForDiscord(tweets[lodash.random(0, tweets.length)].content));
+         }
 
         if (content.startsWith("kz")
         ) {
